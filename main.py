@@ -26,6 +26,12 @@ def copy_text():
     root.clipboard_append(content)
     char_length.set(f"Caracteres: {len(content)}/500 - Copiado!✅")
 
+##Function to clear text box
+def clear_text():
+    text_entry.delete("1.0", "end")
+    char_length.set("Caracteres: 0/500")
+
+
 
 #GUI Widgets
 ## Frames
@@ -55,6 +61,10 @@ length_display.pack(pady=10)
 ### Copy text button
 btn_copy = tk.Button(root, text="Copiar Texto 📋",bg="NavajoWhite4",fg="black",command=copy_text)
 btn_copy.pack(pady=10)
+
+### Clear text button
+btn_clear = tk.Button(root, text="Limpar Texto 🗑️",bg="red",fg="black",command=clear_text)
+btn_clear.pack(padx=10, pady=10)
 
 #Event binding for text entry
 text_entry.bind("<KeyRelease>", update_length)
