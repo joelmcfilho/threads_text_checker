@@ -4,3 +4,7 @@ A simple program designed to measure the length of a text and check if it compli
 --- Version 1.0 ---
 
 The program works as follows: The user types or pastes the text they want to post to the Threads network into the program's text box, which will indicate in real time whether it falls within the network's character limit (500 characters). Additionally, the user can copy the content in the program's text box using a button, sending it to the device's clipboard.
+
+--- Version 1.2 ---
+
+Added a new function: a button to clear all the content in the text box.
