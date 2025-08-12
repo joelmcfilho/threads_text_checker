@@ -7,4 +7,9 @@ The program works as follows: The user types or pastes the text they want to pos
 
 --- Version 1.2 ---
 
-Added a new function: a button to clear all the content in the text box.
+- Added a new function: a button to clear all the content in the text box.
+
+--- Version 1.3 ---
+
+- Corrections in label texts and language issues
+- Created a stand-alone build, to run the program directly in any Windows device
