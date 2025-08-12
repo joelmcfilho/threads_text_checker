@@ -2,7 +2,7 @@ import tkinter as tk
 
 #Main window setup
 root = tk.Tk()
-root.title("Length Checker for Threads")
+root.title("Threads Text Checker")
 root.configure(bg="oldlace")
 
 #Control variables
@@ -13,7 +13,7 @@ char_length.set("Caracteres: 0/500")
 ##Function to update character count
 def update_length(Event=None):
     text = text_entry.get("1.0", "end-1c")
-    char_length.set(f"Caracteres: {len(text)}/500")
+    char_length.set(f"Characters: {len(text)}/500")
     if len(text) > 500:
         length_display.config(fg="red")
     else:
@@ -24,12 +24,12 @@ def copy_text():
     content = text_entry.get("1.0", "end-1c")
     root.clipboard_clear()
     root.clipboard_append(content)
-    char_length.set(f"Caracteres: {len(content)}/500 - Copiado!✅")
+    char_length.set(f"Characters: {len(content)}/500 - Copied!✅")
 
 ##Function to clear text box
 def clear_text():
     text_entry.delete("1.0", "end")
-    char_length.set("Caracteres: 0/500")
+    char_length.set("Characters: 0/500")
 
 
 
@@ -59,11 +59,11 @@ length_display = tk.Label(root, textvariable=char_length, bg="oldlace", font=("A
 length_display.pack(pady=10)
 
 ### Copy text button
-btn_copy = tk.Button(root, text="Copiar Texto 📋",bg="NavajoWhite4",fg="black",command=copy_text)
+btn_copy = tk.Button(root, text="Copy Text 📋",bg="NavajoWhite4",fg="black",command=copy_text)
 btn_copy.pack(pady=10)
 
 ### Clear text button
-btn_clear = tk.Button(root, text="Limpar Texto 🗑️",bg="red",fg="black",command=clear_text)
+btn_clear = tk.Button(root, text="Clear Text 🗑️",bg="red",fg="black",command=clear_text)
 btn_clear.pack(padx=10, pady=10)
 
 #Event binding for text entry
